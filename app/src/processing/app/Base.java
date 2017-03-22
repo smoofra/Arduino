@@ -1398,7 +1398,7 @@ public class Base {
     boardMenuScroller.setTopFixedCount(3 + index);
   }
 
-  public void onBoardOrPortChange() {
+  public synchronized void onBoardOrPortChange() {
     BaseNoGui.onBoardOrPortChange();
 
     // reload keywords when package/platform changes
@@ -1605,7 +1605,20 @@ public class Base {
     @SuppressWarnings("serial")
     Action action = new AbstractAction(board.getName()) {
       public void actionPerformed(ActionEvent actionevent) {
-        selectTargetBoard((TargetBoard) getValue("b"));
+        new Thread()
+        {
+            public void run() {
+              if (activeEditor != null && activeEditor.isCompiling()) {
+                  // block until isCompiling becomes false, but aboid blocking the UI
+                  while (activeEditor.isCompiling()) {
+                    try {
+                      Thread.sleep(100);
+                    } catch (InterruptedException e) {}
+                  }
+              }
+              selectTargetBoard((TargetBoard) getValue("b"));
+            }
+        }.start();
       }
     };
     action.putValue("b", board);
