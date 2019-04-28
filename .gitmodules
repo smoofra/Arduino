@@ -1,0 +1,8 @@
+[submodule "packages/avrdude-build-script"]
+	path = packages/avrdude-build-script
+	url = git@github.com:smoofra/avrdude-build-script.git
+	branch = 64bit
+[submodule "packages/toolchain-avr"]
+	path = packages/toolchain-avr
+	url = git@github.com:smoofra/toolchain-avr.git
+	branch = 64bit
