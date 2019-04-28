@@ -6,3 +6,6 @@
 	path = packages/toolchain-avr
 	url = git@github.com:smoofra/toolchain-avr.git
 	branch = 64bit
+[submodule "packages/ctags"]
+	path = packages/ctags
+	url = git@github.com:smoofra/ctags.git
