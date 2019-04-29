@@ -75,7 +75,7 @@ public abstract class HostDependentDownloadableContribution extends Downloadable
 
     if (osName.contains("Mac")) {
       if (osArch.contains("x86_64")) {
-        return host.matches("x86_64-apple-darwin.*") || host.matches("i[3456]86-apple-darwin.*");
+        return host.matches("x86_64-apple-darwin.*");
       } else {
         return host.matches("i[3456]86-apple-darwin.*");
       }

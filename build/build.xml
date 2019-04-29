@@ -1249,7 +1249,7 @@
 
     <antcall target="${unpack_target}">
       <param name="archive_file" value="${staging_folder}/${gcc_archive_file}"/>
-      <param name="archive_url" value="https://downloads.arduino.cc/tools/${gcc_archive_file}"/>
+      <param name="archive_url" value="https://github.com/smoofra/toolchain-avr/releases/download/5.4.0-atmel3.6.1-arduino2/avr-gcc-5.4.0-atmel3.6.1-arduino2-x86_64-apple-darwin11.tar.bz2"/>
       <param name="final_folder" value="${staging_folder}/work/${staging_hardware_folder}/tmp/gcc/${gcc_version}/"/>
       <param name="dest_folder" value="${staging_folder}/work/${staging_hardware_folder}/tmp/gcc/"/>
     </antcall>
@@ -1258,7 +1258,7 @@
 
     <antcall target="${unpack_target}">
       <param name="archive_file" value="${staging_folder}/${avrdude_archive_file}"/>
-      <param name="archive_url" value="https://downloads.arduino.cc/tools/${avrdude_archive_file}"/>
+      <param name="archive_url" value="https://github.com/smoofra/avrdude-build-script/releases/download/6.3.0-arduino14/avrdude-6.3.0-arduino14-x86_64-apple-darwin11.tar.bz2"/>
       <param name="final_folder" value="${staging_folder}/work/${staging_hardware_folder}/tmp/avrdude/${avrdude_version}"/>
       <param name="dest_folder" value="${staging_folder}/work/${staging_hardware_folder}/tmp/avrdude/"/>
     </antcall>

@@ -178,11 +178,17 @@ public class ContributionsIndexer {
             tools = new LinkedList<>();
           }
           for (ContributedTool contributedTool : tools) {
-            ContributedTool tool = targetPackage.findTool(contributedTool.getName(), contributedTool.getVersion());
-            if (tool != null) {
-              targetPackage.getTools().remove(tool);
+            if ((contributedTool.getName().equals("avr-gcc") && contributedTool.getVersion().equals("5.4.0-atmel3.6.1-arduino2")) ||
+                (contributedTool.getName().equals("arduinoOTA") && contributedTool.getVersion().equals("1.2.1")) ||
+                (contributedTool.getName().equals("avrdude") && contributedTool.getVersion().equals("6.3.0-arduino14"))) { 
+              // do nothing, force it to use the bundled tool.
+            } else { 
+              ContributedTool tool = targetPackage.findTool(contributedTool.getName(), contributedTool.getVersion());
+              if (tool != null) {
+                targetPackage.getTools().remove(tool);
+              }
+              targetPackage.getTools().add(contributedTool);
             }
-            targetPackage.getTools().add(contributedTool);
           }
         }
       }

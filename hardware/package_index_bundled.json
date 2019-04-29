@@ -95,6 +95,13 @@
               "url": "http://downloads.arduino.cc/tools/avr-gcc-5.4.0-atmel3.6.1-arduino2-i386-apple-darwin11.tar.bz2"
             },
             {
+              "size": "35177421",
+              "checksum": "SHA-256:266bfc0d68281e529ebcab4f7b00c35a878c1710aaf38b4b5a05de9e5760d101",
+              "host": "x86_64-apple-darwin11",
+              "archiveFileName": "avr-gcc-5.4.0-atmel3.6.1-arduino2-x86_64-apple-darwin11.tar.bz2",
+              "url": "https://github.com/smoofra/toolchain-avr/releases/download/5.4.0-atmel3.6.1-arduino2/avr-gcc-5.4.0-atmel3.6.1-arduino2-x86_64-apple-darwin11.tar.bz2"
+            },
+            {
               "size": "45923772",
               "checksum": "SHA-256:7eb5691a379b547798fae535b05d68bc02d3969f12d051b8a5a5f2f350ab0a7f",
               "host": "i686-mingw32",
@@ -141,6 +148,14 @@
               "host": "i386-apple-darwin11",
               "archiveFileName": "avrdude-6.3.0-arduino14-i386-apple-darwin12.tar.bz2",
               "url": "http://downloads.arduino.cc/tools/avrdude-6.3.0-arduino14-i386-apple-darwin11.tar.bz2"
+            },
+
+            {
+              "size": "704200",
+              "checksum": "SHA-256:fd480d1eb45f09b8cec51ff89447f089e9149646b95f7f90289a5c31a6cabb50",
+              "host": "x86_64-apple-darwin11",
+              "archiveFileName":  "avrdude-6.3.0-arduino14-x86_64-apple-darwin11.tar.bz2",
+              "url": "https://github.com/smoofra/avrdude-build-script/releases/download/6.3.0-arduino14/avrdude-6.3.0-arduino14-x86_64-apple-darwin11.tar.bz2"
             },
             {
               "size": "253366",
@@ -201,6 +216,13 @@
               "size": "2244088",
               "checksum": "SHA-256:93a6d9f9c0c765d237be1665bf7a0a8e2b0b6d2a8531eae92db807f5515088a7",
               "host": "i386-apple-darwin11",
+              "archiveFileName": "arduinoOTA-1.2.1-darwin_amd64.tar.bz2",
+              "url": "http://downloads.arduino.cc/tools/arduinoOTA-1.2.1-darwin_amd64.tar.bz2"
+            },
+            {
+              "size": "2244088",
+              "checksum": "SHA-256:93a6d9f9c0c765d237be1665bf7a0a8e2b0b6d2a8531eae92db807f5515088a7",
+              "host": "x86_64-apple-darwin11",
               "archiveFileName": "arduinoOTA-1.2.1-darwin_amd64.tar.bz2",
               "url": "http://downloads.arduino.cc/tools/arduinoOTA-1.2.1-darwin_amd64.tar.bz2"
             },
