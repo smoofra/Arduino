@@ -1,15 +1,26 @@
 64bit for Mac OS
 ================
 
-You need to rebuild the three packages in `./packages`, in order to create the following tarballs
+In order to rebuild Ardunio without any 32 bit binaries, you need to rebuild the
+three packages in `./packages`, in order to create the following tarballs:
 
 * `build/macosx/avr-gcc-5.4.0-atmel3.6.1-arduino2-x86_64-apple-darwin11.tar.bz2`
 * `build/macosx/avrdude-6.3.0-arduino14-x86_64-apple-darwin11.tar.bz2`
 * `build/arduino-builder-fixed-macosx-1.4.1.tar`
 
-For the first two, just run `package-avr-gcc.bash`, and `package-avrdude.bash`, and move the files into `build`.
 
-For the last one, I couldn't find a package script, so you have to build ctags
+For the first two
+-----------------
+Just run `package-avr-gcc.bash`, and `package-avrdude.bash`, and move the files into `build`.
+
+I've uploaded tarballs as "releases" in those fork repos on github, and linked
+them in `build.xml`, so ant should actually download and install those
+automatically without you needing to rebuild them.
+
+For the last one
+-----------------
+
+I couldn't find a package script, so you have to build ctags
 and then just append it to the existing tarball for arduino-builder.  All you
 need is the `ctags` binary.
 
