@@ -1,15 +1,18 @@
-64bit for Mac OS
+64bit only build for Mac OS
 ================
 
-In order to rebuild Ardunio without any 32 bit binaries, you need to rebuild the
-three packages in `./packages`, in order to create the following tarballs:
+This branch replaces three of the packages that go into Arduino with rebuilt
+ones without any 32 bit binaries.
+
+These rebuilt packages are downloaded to the following tarballs:
 
 * `build/macosx/avr-gcc-5.4.0-atmel3.6.1-arduino2-x86_64-apple-darwin11.tar.bz2`
 * `build/macosx/avrdude-6.3.0-arduino14-x86_64-apple-darwin11.tar.bz2`
-* `build/arduino-builder-fixed-macosx-1.4.1.tar`
+* `build/arduino-builder-macosx-fixed-1.4.1.tar`
 
+The changes for eac package are linked as submodules in `./packages/`
 
-For the first two
+To build the the first two
 -----------------
 Just run `package-avr-gcc.bash`, and `package-avrdude.bash`, and move the files into `build`.
 
@@ -20,11 +23,12 @@ automatically without you needing to rebuild them.
 For the last one
 -----------------
 
-I couldn't find a package script, so you have to build ctags
-and then just append it to the existing tarball for arduino-builder.  All you
-need is the `ctags` binary.
+It's called arduino-builder but what really needs rebuilt is ctags, which is
+packaged along with it.
 
-Create the tarballs and their corresponding `.sha` files and then Arduino should build with `ant build`
+I couldn't find a package script, so I wrote my own goofy one that just patches
+the official one, it's called `package.sh` in my ctags branch.  This patched
+`arduino-builder` tarball is also "released" in my ctags fork.
 
 
 Arduino
